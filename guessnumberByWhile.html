@@ -1,0 +1,38 @@
+<html>
+    <title>Guess the number</title>
+    <body>
+        <input id='box' type="number">
+        <button id='guess'>Guess</button>
+        <select id='guess'>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+
+        <script type="text/javascript">
+        
+        document.getElementById("guess").onclick=function(){
+            var userNo=document.getElementById("box").value;
+            var got=false;
+            var count=0;
+            while(got==false){
+                var randomeNum=Math.random();
+                randomeNum=randomeNum*6;
+                randomeNum=Math.floor(randomeNum);
+
+                if(userNo==randomeNum){
+                    alert('you got it!! '+userNo+' it took '+count+' no of time for your computer');
+                    got=true
+                }
+                else{
+                    count++
+                }
+            }
+        }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <style>
+        .dive{
+            height: 200px;
+            width: 500px;
+            background-color: gray;
+            border-radius: 20px;
+        }
+        
+        /* .bu{
+            margin-top: 70px;
+        } */
+    </style>
+    <title>Guess MY Number</title>
+    <body>
+    <center><div class="dive">
+        <p>Guess how many finger am i holding up</p>
+        <input class="inpu" type="number" id="box">
+        <button class="bu" id="guess">Guess!!</button>
+        <p id="answer"></p>
+    </div>
+    </center>
+
+
+        <script type="text/javascript">
+
+        document.getElementById("guess").onclick=function(){
+            var guessNo = document.getElementById("box").value;
+
+            var random = Math.random();
+
+            random=random*6;
+
+            random=Math.floor(random)
+
+            if (guessNo==random){
+                // alert("Its an correct guess")
+                document.getElementById("answer").innerHTML="Its an corrent guess";
+            }
+            else{
+                // alert("Try again..it was",random)
+                document.getElementById("answer").innerHTML="Try again.......It was wrong..correct was "+random;
+            }
+        
+            //math.random() generates random numbers,math.floor() will remove decimal number .00
+        }
+        // alert(Math.floor(Math.random() * 6));
+   
+        
+
+        </script>
+    </body>
+</html>
